@@ -1,0 +1,34 @@
+/* uni-app 内置样式变量（主题定制） */
+
+/* 行为相关颜色 */
+$uni-color-primary: #07C160;   // 品牌绿
+$uni-color-success: #07C160;
+$uni-color-warning: #FF6B00;   // 活力橙
+$uni-color-error: #F53F3F;
+
+/* 文字基本颜色 */
+$uni-text-color: #1F2329;                 // 主文字
+$uni-text-color-inverse: #FFFFFF;         // 反色
+$uni-text-color-grey: #86909C;            // 辅助灰色
+$uni-text-color-placeholder: #C9CDD4;     // 占位
+$uni-text-color-disable: #C9CDD4;
+
+/* 背景颜色 */
+$uni-bg-color: #FFFFFF;
+$uni-bg-color-grey: #F5F6F8;              // 页面底色
+$uni-bg-color-hover: #F2F3F5;             // 点击状态
+$uni-bg-color-mask: rgba(0, 0, 0, 0.5);   // 遮罩
+
+/* 边框颜色 */
+$uni-border-color: #EBEDF0;
+
+/* 尺寸变量 */
+$uni-font-size-sm: 24rpx;
+$uni-font-size-base: 28rpx;
+$uni-font-size-lg: 32rpx;
+
+/* Border Radius */
+$uni-border-radius-sm: 8rpx;
+$uni-border-radius-base: 16rpx;
+$uni-border-radius-lg: 32rpx;
+$uni-border-radius-circle: 50%;

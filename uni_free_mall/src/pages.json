@@ -1,0 +1,146 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationStyle": "custom",
+        "enablePullDownRefresh": true,
+        "backgroundColor": "#F5F6F8"
+      }
+    },
+    {
+      "path": "pages/category/category",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F6F8"
+      }
+    },
+    {
+      "path": "pages/cart/cart",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F6F8"
+      }
+    },
+    {
+      "path": "pages/mine/index",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F6F8"
+      }
+    },
+    {
+      "path": "pages/goods/detail",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F6F8"
+      }
+    },
+    {
+      "path": "pages/settle/confirm",
+      "style": {
+        "navigationStyle": "custom",
+        "backgroundColor": "#F5F6F8"
+      }
+    }
+  ],
+  "subPackages": [
+    {
+      "root": "pages/order",
+      "pages": [
+        { "path": "list", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } },
+        { "path": "detail", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } },
+        { "path": "result", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } }
+      ]
+    },
+    {
+      "root": "pages/search",
+      "pages": [
+        { "path": "search", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } }
+      ]
+    },
+    {
+      "root": "pages/user",
+      "pages": [
+        { "path": "login", "style": { "navigationStyle": "custom", "backgroundColor": "#FFFFFF" } },
+        { "path": "favorite", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } },
+        { "path": "edit", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } }
+      ]
+    },
+    {
+      "root": "pages/address",
+      "pages": [
+        { "path": "list", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } },
+        { "path": "edit", "style": { "navigationStyle": "custom", "backgroundColor": "#FFFFFF" } }
+      ]
+    },
+    {
+      "root": "pages/refund",
+      "pages": [
+        { "path": "list", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } },
+        { "path": "apply", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } },
+        { "path": "detail", "style": { "navigationStyle": "custom", "backgroundColor": "#F5F6F8" } }
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/index/index": {
+      "network": "all",
+      "packages": ["pages/order", "pages/search"]
+    }
+  },
+  "globalStyle": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "生鲜商城",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F5F6F8"
+  },
+  "tabBar": {
+    "color": "#86909C",
+    "selectedColor": "#1677FF",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "static/tabbar/home.png",
+        "selectedIconPath": "static/tabbar/home-active.png"
+      },
+      {
+        "pagePath": "pages/category/category",
+        "text": "分类",
+        "iconPath": "static/tabbar/category.png",
+        "selectedIconPath": "static/tabbar/category-active.png"
+      },
+      {
+        "pagePath": "pages/cart/cart",
+        "text": "购物车",
+        "iconPath": "static/tabbar/cart.png",
+        "selectedIconPath": "static/tabbar/cart-active.png"
+      },
+      {
+        "pagePath": "pages/mine/index",
+        "text": "我的",
+        "iconPath": "static/tabbar/mine.png",
+        "selectedIconPath": "static/tabbar/mine-active.png"
+      }
+    ]
+  },
+  "uniIdRouter": {},
+  "easycom": {
+    "autoscan": true,
+    "custom": {
+      "^custom-nav-bar$": "@/components/common/CustomNavBar.vue",
+      "^skeleton$": "@/components/common/Skeleton.vue",
+      "^empty-state$": "@/components/common/EmptyState.vue",
+      "^loading-icon$": "@/components/common/LoadingIcon.vue",
+      "^price-text$": "@/components/common/PriceText.vue",
+      "^count-down$": "@/components/common/CountDown.vue",
+      "^goods-card$": "@/components/business/GoodsCard.vue",
+      "^delivery-progress$": "@/components/business/DeliveryProgress.vue",
+      "^status-tag$": "@/components/business/StatusTag.vue"
+    }
+  }
+}

@@ -1,0 +1,137 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: Mall_YunYu
+  # 默认激活 dev profile,生产环境通过 SPRING_PROFILES_ACTIVE=prod 切换
+  profiles:
+    active: ${SPRING_PROFILES_ACTIVE:dev}
+
+  # 开启虚拟线程(JDK21特性,IO密集型性能提升)
+  threads:
+    virtual:
+      enabled: true
+
+  # 数据源 - 通过环境变量覆盖,避免硬编码
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    # 修复:开发环境可使用 useSSL=false,生产环境通过 application-prod.yml 强制 useSSL=true
+    url: ${MYSQL_URL:jdbc:mysql://localhost:3306/fresh_mall?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false&allowPublicKeyRetrieval=true}
+    username: ${MYSQL_USERNAME:root}
+    password: ${MYSQL_PASSWORD:123456}
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      max-lifetime: 1800000
+      pool-name: FreshMallHikariPool
+      connection-test-query: SELECT 1
+
+  # Redis - 本地无密码,不配置 password,避免 AUTH 失败
+  data:
+    redis:
+      host: ${REDIS_HOST:localhost}
+      port: ${REDIS_PORT:6379}
+      database: ${REDIS_DB:0}
+      timeout: 5000ms
+
+  # 文件上传大小限制(需 >= mall.upload.max-size-mb,否则超限会先被容器拦截)
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  # Jackson
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: Asia/Shanghai
+    default-property-inclusion: non_null
+
+# MyBatis-Plus
+mybatis-plus:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.mall_yunyu.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    # 开发环境打印 SQL,生产环境通过 application-prod.yml 关闭
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: auto
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# Sa-Token
+sa-token:
+  token-name: Authorization
+  timeout: 7200
+  active-timeout: -1
+  is-concurrent: true
+  is-share: false
+  token-style: uuid
+  is-log: false
+
+# Knife4j - 开发环境启用,生产环境通过 application-prod.yml 关闭
+knife4j:
+  enable: true
+  openapi:
+    title: 生鲜商城接口文档
+    description: 生鲜商城小程序API
+    version: 1.0.0
+    group:
+      default:
+        group-name: 默认分组
+        api-rule: package
+        api-rule-resources:
+          - com.mall_yunyu.controller
+
+# 业务自定义配置
+mall:
+  # 敏感配置加密
+  security:
+    # sys_config 表中 APIv3密钥、COS SecretKey 的 AES 加密种子
+    # 【生产必改】务必通过环境变量注入并妥善保管:
+    #   1) 换了这个值,库里已加密的密钥将无法解密,需在后台重新填写
+    #   2) 用默认值等于没加密,拖库即泄露
+    config-secret: ${MALL_CONFIG_SECRET:mall_yunyu_default_secret}
+
+  # 微信支付证书存放目录
+  # 【严禁】把该目录配置成 mall.upload.path 的子目录或做静态资源映射,
+  # 否则 apiclient_key.pem(商户私钥)会被公网直接下载,后果=任何人可代你发起付款
+  cert:
+    path: ${MALL_CERT_PATH:./certs}
+
+  # 图片上传兜底配置
+  # 说明: 存储方式/压缩参数/大小上限/扩展名白名单的权威来源是 sys_config 表,
+  #       后台「系统配置」页面可改、改完即时生效; 这里仅在库不可用时兜底
+  upload:
+    # 本地存储根目录兜底值,相对路径以服务启动目录为基准;生产建议用绝对路径并挂载持久化磁盘
+    path: ${MALL_UPLOAD_PATH:./uploads}
+    # HTTP 访问前缀,须与 WebMvcConfig 静态资源映射一致(改这里必须同步改 WebMvcConfig)
+    url-prefix: /uploads
+    # 图片外链域名兜底值;留空则自动取当前请求域名(本地即 http://localhost:8080)
+    domain: ${MALL_UPLOAD_DOMAIN:}
+    # 单张图片大小上限(MB)兜底值
+    max-size-mb: 5
+    # 允许的图片扩展名兜底值
+    allow-ext: jpg,jpeg,png,gif,webp,bmp
+
+# 微信小程序配置 - 通过环境变量注入,不要硬编码到代码库
+wx:
+  miniapp:
+    appid: ${WX_MINIAPP_APPID:your-miniapp-appid}
+    secret: ${WX_MINIAPP_SECRET:your-miniapp-secret}
+  # 微信支付V3兜底配置
+  # 说明: 支付参数的权威来源是 sys_config 表(后台「系统配置」页面维护),
+  #       这里仅在 sys_config 未建表/未填写时兜底; your- 开头的占位值一律视为"未配置"
+  pay:
+    appid: ${WX_PAY_APPID:your-pay-appid}
+    mch-id: ${WX_PAY_MCH_ID:your-mch-id}
+    api-v3-key: ${WX_PAY_API_V3_KEY:your-api-v3-key}
+    cert-serial-no: ${WX_PAY_CERT_SERIAL_NO:your-cert-serial-no}
+    private-key-path: ${WX_PAY_PRIVATE_KEY_PATH:classpath:cert/apiclient_key.pem}
+    private-cert-path: ${WX_PAY_PRIVATE_CERT_PATH:classpath:cert/apiclient_cert.pem}
+    notify-url: ${WX_PAY_NOTIFY_URL:https://your-domain.com/api/publicly/payment/callback/wechat/ma}
+    refund-notify-url: ${WX_PAY_REFUND_NOTIFY_URL:https://your-domain.com/api/publicly/payment/callback/wechat/refund/ma}

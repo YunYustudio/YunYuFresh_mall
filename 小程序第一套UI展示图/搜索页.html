@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script>
+      tailwind = { config: { corePlugins: { preflight: false } } };
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC%3Awght%40100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      *, ::before, ::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="relative w-[702px] h-[578px]">
+      <div
+        data-pencil-name="热门搜索"
+        class="box-border w-[702px] h-fit absolute left-0 top-[365px] flex flex-col gap-[14px] justify-start items-start"
+      >
+        <div
+          data-pencil-name="标题"
+          class="text-[28px]/[normal] box-border text-[#1F2329] font-['Noto_Sans_SC',system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+        >
+          热门搜索
+        </div>
+        <div
+          data-pencil-name="热词行1"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-[12px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="热-鲜虾"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#FFFFFF] [outline:2px_solid_#07C160] [outline-offset:-1px] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#07C160] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              鲜虾
+            </div>
+          </div>
+          <div
+            data-pencil-name="热-时令水果"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#FFFFFF] [outline:2px_solid_#07C160] [outline-offset:-1px] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#07C160] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              时令水果
+            </div>
+          </div>
+        </div>
+        <div
+          data-pencil-name="热词行2"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-[12px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="热-精选牛肉"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#FFFFFF] [outline:2px_solid_#07C160] [outline-offset:-1px] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#07C160] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              精选牛肉
+            </div>
+          </div>
+          <div
+            data-pencil-name="热-米面粮油"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#FFFFFF] [outline:2px_solid_#07C160] [outline-offset:-1px] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#07C160] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              米面粮油
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="Home指示条"
+        class="box-border w-[120px] h-[8px] absolute left-[291px] top-[570px] bg-[#D5DAE0] rounded-full"
+      ></div>
+      <div
+        data-pencil-name="搜索历史"
+        class="box-border w-[702px] h-fit absolute left-0 top-[168px] flex flex-col gap-[14px] justify-start items-start"
+      >
+        <div
+          data-pencil-name="标题行"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-0 justify-between items-center"
+        >
+          <div
+            data-pencil-name="标题"
+            class="text-[28px]/[normal] box-border text-[#1F2329] font-['Noto_Sans_SC',system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+          >
+            搜索历史
+          </div>
+          <div
+            data-pencil-name="清空"
+            class="box-border w-fit shrink-0 h-fit flex flex-row gap-[4px] justify-start items-center"
+          >
+            <svg
+              data-pencil-name="垃圾桶"
+              data-icon-name="trash-2"
+              data-icon-set="lucide"
+              viewBox="0 0 13.99993896484375 14"
+              preserveAspectRatio="xMidYMid meet"
+              xmlns="http://www.w3.org/2000/svg"
+              class="box-border w-[22px] shrink-0 h-[22px]"
+            >
+              <path
+                d="M5.65674 0.60156q-0.44775 0.04102-0.84766 0.32129-0.3999 0.28027-0.58105 0.70069-0.08545 0.21191-0.1128 0.37939-0.02734 0.16748-0.02734 0.50244l-0.01367 0.42041-2.4917 0-0.08545 0.05469q-0.18115 0.09912-0.28027 0.2666-0.04102 0.08545-0.04102 0.25293 0 0.16748 0.04102 0.24609 0.04443 0.0752 0.12646 0.16065 0.08545 0.08203 0.14697 0.11963 0.06494 0.03418 0.13331 0.04101 0.07178 0.00684 0.33496 0.00684l0.36572 0 0.01367 7.84082 0.04102 0.16748q0.07178 0.25293 0.18115 0.44092 0.11279 0.18799 0.29394 0.37256 0.18457 0.18115 0.37256 0.29394 0.18799 0.10938 0.44092 0.18115l0.16748 0.04102 6.33008 0 0.16748-0.04102q0.25293-0.07178 0.44092-0.18115 0.18799-0.11279 0.36914-0.29394 0.18457-0.18457 0.29394-0.37256 0.11279-0.18799 0.18457-0.44092l0.04102-0.16748 0.01367-7.84082 0.36572 0q0.26318 0 0.33155-0.00684 0.07178-0.00684 0.1333-0.04101 0.06494-0.0376 0.14697-0.11963 0.08545-0.08545 0.12647-0.16065 0.04443-0.07861 0.04443-0.24609 0-0.16748-0.04102-0.25293-0.09912-0.16748-0.28027-0.2666l-0.08545-0.05469-2.4917 0-0.01367-0.42041q0-0.28027-0.00684-0.37598-0.00684-0.09912-0.03418-0.21191-0.15381-0.56055-0.57422-0.91602-0.42041-0.35889-0.99462-0.41357-0.16748-0.01367-1.31592-0.00684-1.14844 0.00684-1.32959 0.02051z m2.74463 1.20313q0.19482 0.09912 0.29394 0.29394 0.02734 0.07178 0.03418 0.13672 0.00684 0.06152 0.02051 0.32813l0 0.3623-3.5 0 0-0.3623q0.01367-0.2666 0.02051-0.32813 0.00684-0.06494 0.03418-0.13672 0.08545-0.18115 0.22558-0.24951l0-0.01367q0.08203-0.04443 0.16748-0.05811 0.08545-0.01367 0.36573-0.02734l2.23877 0.01367 0.09912 0.04102z m2.09863 6.13183l-0.01367 3.86573-0.02735 0.08545q-0.12646 0.26318-0.37939 0.33496-0.08203 0.02734-3.07959 0.02734-2.99756 0-3.07959-0.02734-0.25293-0.07178-0.37939-0.33496l-0.02735-0.08545-0.01367-7.72803 7 0 0 3.8623z m-4.7749-2.08496q-0.12646 0.01367-0.2461 0.10596-0.11621 0.08887-0.17431 0.21533l-0.04102 0.09912-0.01367 3.33252q0.01367 0.3623 0.02734 0.4751 0.01367 0.08545 0.07178 0.15381l0.01367 0.02734q0.15381 0.21191 0.417 0.23242 0.2666 0.02051 0.46484-0.17431 0.12646-0.12646 0.15381-0.29395 0.02734-0.11279 0.02734-1.86279 0-1.75-0.02734-1.84912-0.04102-0.23584-0.23242-0.36914-0.18799-0.1333-0.44092-0.09229z m2.35156 0q-0.18115 0.01367-0.31445 0.14698-0.1333 0.1333-0.16065 0.31445-0.02734 0.09912-0.02734 1.86279 0 1.76367 0.02734 1.86279 0.02734 0.16748 0.15381 0.28028 0.19824 0.19482 0.46143 0.17431 0.2666-0.02051 0.42041-0.24609l0.01367-0.01367q0.05811-0.08203 0.07178-0.15381 0.01367-0.12646 0.02734-0.4751l0-3.2915-0.04102-0.0957q-0.08545-0.21191-0.25293-0.30762-0.16748-0.09912-0.37939-0.05811z"
+                fill="#86909C"
+              ></path>
+            </svg>
+            <div
+              data-pencil-name="字"
+              class="text-[22px]/[normal] box-border text-[#86909C] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              清空
+            </div>
+          </div>
+        </div>
+        <div
+          data-pencil-name="历史行1"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-[12px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="词-基围虾"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#F2F3F5] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#4E5969] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              基围虾
+            </div>
+          </div>
+          <div
+            data-pencil-name="词-西红柿"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#F2F3F5] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#4E5969] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              西红柿
+            </div>
+          </div>
+          <div
+            data-pencil-name="词-土鸡蛋"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#F2F3F5] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#4E5969] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              土鸡蛋
+            </div>
+          </div>
+        </div>
+        <div
+          data-pencil-name="历史行2"
+          class="box-border w-full h-fit shrink-0 flex flex-row gap-[12px] justify-start items-center"
+        >
+          <div
+            data-pencil-name="词-红富士"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#F2F3F5] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#4E5969] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              红富士
+            </div>
+          </div>
+          <div
+            data-pencil-name="词-生姜"
+            class="box-border w-fit shrink-0 h-[56px] flex flex-row gap-0 p-[0px_20px] justify-center items-center bg-[#F2F3F5] rounded-[28px]"
+          >
+            <div
+              data-pencil-name="字"
+              class="text-[24px]/[normal] box-border text-[#4E5969] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+            >
+              生姜
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        data-pencil-name="导航栏"
+        class="box-border w-[702px] h-[84px] absolute left-0 top-[68px] flex flex-row gap-[16px] justify-start items-center"
+      >
+        <div
+          data-pencil-name="返回"
+          class="box-border w-[44px] shrink-0 h-[44px] flex flex-row gap-0 justify-center items-center"
+        >
+          <svg
+            data-pencil-name="返回图标"
+            data-icon-name="chevron-left"
+            data-icon-set="lucide"
+            viewBox="0 0 13.99993896484375 14"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            class="box-border w-[26px] shrink-0 h-[26px]"
+          >
+            <path
+              d="M8.59619 2.93945q-0.08545 0.02734-0.19482 0.1128-0.14014 0.12646-0.53321 0.51611l-1.28857 1.2749q-1.81836 1.82178-1.86279 1.90723-0.04102 0.08203-0.04102 0.24951 0 0.16748 0.04785 0.25977 0.05127 0.08887 1.8628 1.9038 1.81494 1.81152 1.9038 1.8628 0.09229 0.04785 0.2461 0.04785 0.15381 0 0.23584-0.03418 0.08545-0.0376 0.18115-0.1333 0.09912-0.09912 0.1333-0.18115 0.0376-0.08545 0.0376-0.23926 0-0.15381-0.04443-0.23584-0.04102-0.08545-1.62012-1.66797l-1.58252-1.58252 1.58252-1.58252q1.5791-1.58252 1.62012-1.66455 0.04443-0.08545 0.04443-0.23926 0-0.15381-0.0376-0.23584-0.03418-0.08545-0.11621-0.18457-0.16748-0.15381-0.39307-0.16748-0.14014 0-0.18115 0.01367z"
+              fill="#1F2329"
+            ></path>
+          </svg>
+        </div>
+        <div
+          data-pencil-name="搜索框"
+          class="box-border [flex:1_1_0] h-[64px] flex flex-row gap-[10px] p-[0px_20px] justify-start items-center bg-[#F2F3F5] rounded-[32px]"
+        >
+          <div
+            data-pencil-name="光标"
+            class="box-border w-[3px] shrink-0 h-[30px] flex flex-row gap-0 justify-start items-start bg-[#07C160]"
+          ></div>
+          <div
+            data-pencil-name="占位"
+            class="text-[24px]/[normal] box-border text-[#C9CDD4] font-['Noto_Sans_SC',system-ui,sans-serif] font-normal text-left [white-space:nowrap]"
+          >
+            搜索生鲜、水果、蔬菜…
+          </div>
+        </div>
+        <div
+          data-pencil-name="搜索按钮"
+          class="text-[28px]/[normal] box-border text-[#FF6B00] font-['Noto_Sans_SC',system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+        >
+          搜索
+        </div>
+      </div>
+      <div
+        data-pencil-name="状态栏"
+        class="box-border w-[702px] h-[52px] absolute left-0 top-0 flex flex-row gap-0 justify-between items-center"
+      >
+        <div
+          data-pencil-name="时间"
+          class="text-[28px]/[normal] box-border text-[#1F2329] font-['Noto_Sans_SC',system-ui,sans-serif] font-semibold text-left [white-space:nowrap]"
+        >
+          9:41
+        </div>
+        <div
+          data-pencil-name="状态图标"
+          class="box-border w-fit shrink-0 h-fit flex flex-row gap-[6px] justify-start items-center"
+        >
+          <svg
+            data-pencil-name="信号"
+            data-icon-name="signal"
+            data-icon-set="lucide"
+            viewBox="0 0 13.99993896484375 14"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            class="box-border w-[22px] shrink-0 h-[22px]"
+          >
+            <path
+              d="M12.69775 1.76367q-0.14014 0.04102-0.25976 0.15381-0.11963 0.11279-0.16065 0.25293-0.02734 0.09912-0.02734 4.82959 0 4.73047 0.02734 4.82959 0.05811 0.21191 0.23243 0.32471 0.17432 0.10938 0.37597 0.08886 0.20508-0.02051 0.35889-0.17431 0.12646-0.12646 0.15381-0.29395 0.02734-0.11279 0.02734-4.7749 0-4.66211-0.02734-4.7749-0.02734-0.16748-0.15381-0.29395-0.09912-0.11279-0.25293-0.15381-0.15381-0.04102-0.29395-0.01367z m-2.87109 2.33789q-0.18115 0.01367-0.31445 0.14698-0.1333 0.1333-0.16065 0.31445-0.02734 0.11279-0.02734 3.61963 0 3.50684 0.02734 3.59228 0.02734 0.18115 0.15381 0.29395 0.19824 0.19482 0.46143 0.17431 0.2666-0.02051 0.42041-0.24609l0.02734-0.02734q0.04443-0.05469 0.05811-0.19483 0.01367-0.16748 0.02734-0.7998l0-6.41211-0.04102-0.0957q-0.08545-0.21191-0.25292-0.30762-0.16748-0.09912-0.3794-0.05811z m-2.98047 2.33789q-0.25293 0.08545-0.37939 0.30762l-0.04102 0.08545 0 4.94238 0.02735 0.0957q0.08545 0.21192 0.29394 0.32471 0.09912 0.04102 0.25293 0.04102 0.15381 0 0.25293-0.04102 0.2085-0.11279 0.29395-0.32471l0.02734-0.0957 0-4.94238-0.04102-0.08545q-0.09912-0.18115-0.28027-0.2666-0.08545-0.04102-0.22559-0.04785-0.14014-0.00684-0.18115 0.00683z m-2.89844 2.32422q-0.14014 0.04102-0.25976 0.15381-0.11963 0.11279-0.16065 0.25293-0.02734 0.09912-0.02734 1.33984 0 1.23731 0.02734 1.31934 0.05811 0.21191 0.23243 0.32471 0.17432 0.10938 0.37597 0.08886 0.20508-0.02051 0.35889-0.17431 0.12646-0.12646 0.15381-0.29395 0.02734-0.11279 0.02734-1.2749 0-1.16211-0.02734-1.2749-0.02734-0.16748-0.15381-0.29395-0.09912-0.11279-0.25293-0.15381-0.15381-0.04102-0.29395-0.01367z m-2.87109 2.33789q-0.23584 0.02734-0.38281 0.23242-0.14697 0.20166-0.09229 0.44092 0.02734 0.18115 0.15381 0.29395 0.16748 0.16748 0.42041 0.16748 0.14014 0 0.23926-0.04102 0.2085-0.09912 0.28369-0.29394 0.07861-0.19824 0.03076-0.3999-0.04785-0.20508-0.23242-0.32129-0.18115-0.11963-0.42041-0.07862z"
+              fill="#1F2329"
+            ></path>
+          </svg>
+          <svg
+            data-pencil-name="WiFi"
+            data-icon-name="wifi"
+            data-icon-set="lucide"
+            viewBox="0 0 13.99993896484375 14"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            class="box-border w-[22px] shrink-0 h-[22px]"
+          >
+            <path
+              d="M6.62061 2.35156q-1.5791 0.05811-3.05909 0.63916-1.47656 0.57764-2.67968 1.63037-0.18115 0.15381-0.23926 0.27344-0.05469 0.11621-0.05469 0.24268 0 0.25293 0.17432 0.42041 0.17432 0.16748 0.44091 0.15381 0.12646 0 0.2085-0.04102 0.08545-0.04102 0.31104-0.22559 0.40674-0.33496 0.75537-0.57421 1.66455-1.11768 3.67431-1.31934 2.00977-0.20508 3.87256 0.52295 1.20313 0.48877 2.25244 1.3706 0.22559 0.18457 0.30762 0.22559 0.08545 0.04102 0.21191 0.04102 0.2666 0.01367 0.44092-0.15381 0.17432-0.16748 0.17432-0.42041 0-0.12646-0.05811-0.24268-0.05469-0.11963-0.23584-0.27344-1.40137-1.22021-3.19238-1.8081-1.24414-0.42041-2.46435-0.46143l-0.39307-0.01367q-0.0957 0-0.44775 0.01367z m-0.09571 2.91211q-0.95361 0.07178-1.86279 0.42725-0.90918 0.35547-1.68164 0.97412-0.2085 0.16748-0.37598 0.33496-0.16748 0.16748-0.19482 0.23926-0.07178 0.12305-0.07178 0.26318 0 0.14014 0.06152 0.2666 0.06494 0.12646 0.19825 0.21192 0.1333 0.08203 0.27343 0.0957 0.14014 0.01367 0.24952-0.03418 0.11279-0.04785 0.25293-0.17432 1.03564-0.96729 2.32421-1.28857 1.28857-0.32129 2.54639-0.01367 1.26123 0.30762 2.22852 1.17578 0.2666 0.22559 0.38281 0.28711 0.11963 0.06152 0.27344 0.04785 0.15381-0.01367 0.28027-0.0957 0.12647-0.08545 0.18799-0.20166 0.06494-0.11963 0.06494-0.27344 0-0.15723-0.06494-0.27344-0.06152-0.11963-0.38965-0.40674-0.32813-0.28711-0.65283-0.49902-0.90918-0.60156-1.93115-0.86475-1.02197-0.2666-2.09864-0.19824z m0.02735 2.93945q-0.54688 0.07178-1.03565 0.29395-0.33496 0.15381-0.67334 0.41357-0.33496 0.25977-0.40674 0.42725-0.10938 0.25293 0 0.49219 0.11279 0.23584 0.3794 0.32129 0.29395 0.08203 0.58789-0.18457 0.68701-0.62891 1.59619-0.62891 0.90918 0 1.59619 0.62891 0.29395 0.2666 0.60156 0.18457 0.25293-0.08545 0.36231-0.32129 0.11279-0.23926 0.00342-0.49219-0.07178-0.16748-0.41016-0.42725-0.33496-0.25977-0.66992-0.41357-0.43408-0.2085-0.95361-0.28369-0.51611-0.07861-0.97754-0.01026z m0.34863 2.89844q-0.18115 0.02734-0.32129 0.16748-0.2085 0.21191-0.15381 0.50586 0.05469 0.29395 0.32129 0.42041 0.09912 0.04102 0.25293 0.04102 0.25293 0 0.42041-0.16748 0.12646-0.12646 0.15381-0.29395 0.05469-0.30762-0.15723-0.51611-0.2085-0.21191-0.51611-0.15723z"
+              fill="#1F2329"
+            ></path>
+          </svg>
+          <svg
+            data-pencil-name="电量"
+            data-icon-name="battery-full"
+            data-icon-set="lucide"
+            viewBox="0 0 13.99993896484375 14"
+            preserveAspectRatio="xMidYMid meet"
+            xmlns="http://www.w3.org/2000/svg"
+            class="box-border w-[26px] shrink-0 h-[22px]"
+          >
+            <path
+              d="M1.97559 2.95313q-0.56055 0.12646-0.93311 0.54003-0.36914 0.41357-0.44092 0.9878-0.02734 0.15381-0.02734 2.51904 0 2.36523 0.02734 2.51904 0.02734 0.30762 0.16748 0.58789 0.15381 0.32471 0.44092 0.56397 0.28711 0.23584 0.65283 0.34863l0.15381 0.05469 7.0957-0.01367q0.54688 0 0.63233-0.02735 0.48877-0.14014 0.81689-0.46826 0.33154-0.33154 0.47168-0.82031 0.02734-0.08545 0.02735-0.4751l0.01367-2.26953-0.01367-2.26953q0-0.38965-0.02735-0.4751-0.12646-0.48877-0.458-0.81689-0.32813-0.33154-0.80323-0.47168l-0.14013-0.04102-6.98633 0q-0.56055 0.01367-0.66992 0.02735z m7.58789 1.17578q0.2085 0.09912 0.30761 0.30761l0.04102 0.09912 0 4.92872-0.04102 0.09912q-0.14014 0.27686-0.43408 0.33496-0.09912 0.02734-3.59912 0.02734-3.5 0-3.60596-0.02051-0.10254-0.02051-0.17431-0.05468-0.06836-0.0376-0.14014-0.1128-0.06836-0.07861-0.11279-0.16064l-0.04102-0.09912 0-4.95606 0.04102-0.09912q0.05811-0.12646 0.16748-0.21533 0.11279-0.09229 0.25293-0.10596 0.09912-0.02734 3.66748-0.01367l3.57178 0 0.09912 0.04102z m-6.20362 1.13476q-0.12646 0.02734-0.23925 0.1333-0.10938 0.10596-0.16749 0.23242-0.02734 0.06836-0.02734 0.24952l0 1.12109 0 1.12109q0 0.18115 0.02734 0.24952 0.08545 0.21191 0.29395 0.3247 0.09912 0.04102 0.25293 0.04102 0.15381 0 0.25293-0.04102 0.2085-0.11279 0.29394-0.3247 0.02734-0.06836 0.02735-0.24952l0-1.12109 0-1.12109q0-0.18115-0.02735-0.24952-0.08545-0.19824-0.28369-0.30078-0.19482-0.10596-0.40332-0.06494z m2.33789 0q-0.14014 0.04102-0.25976 0.15381-0.11963 0.11279-0.16065 0.25293-0.02734 0.09912-0.02734 1.33984 0 1.2373 0.02734 1.31934 0.05811 0.21191 0.23243 0.32471 0.17432 0.10938 0.37597 0.08886 0.20508-0.02051 0.35889-0.17431 0.12646-0.12646 0.15381-0.29395 0.02734-0.11279 0.02734-1.2749 0-1.16211-0.02734-1.2749-0.02734-0.16748-0.15381-0.29395-0.09912-0.11279-0.25293-0.15381-0.15381-0.04102-0.29395-0.01367z m2.32422 0q-0.11279 0.02734-0.21875 0.11279-0.10254 0.08203-0.15381 0.18116-0.04785 0.09912-0.06152 0.31787-0.01367 0.21533-0.01367 1.12451 0 0.90918 0.01367 1.12793 0.01367 0.21533 0.05469 0.31445 0.04443 0.06836 0.11963 0.14014 0.07861 0.06836 0.16064 0.11279 0.23926 0.10938 0.48194 0 0.24609-0.11279 0.31787-0.36572 0.02734-0.08203 0.02734-1.32959 0-1.24756-0.02734-1.32959-0.05811-0.18115-0.19825-0.28711-0.14014-0.10596-0.32129-0.11963-0.11279-0.01367-0.18115 0z m4.67578 0q-0.14014 0.04102-0.25976 0.15381-0.11963 0.11279-0.16065 0.25293-0.02734 0.09912-0.02734 1.33984 0 1.2373 0.02734 1.31934 0.05811 0.21191 0.23243 0.32471 0.17432 0.10938 0.37597 0.08886 0.20508-0.02051 0.35889-0.17431 0.12646-0.12646 0.15381-0.29395 0.02734-0.11279 0.02734-1.2749 0-1.16211-0.02734-1.2749-0.02734-0.16748-0.15381-0.29395-0.09912-0.11279-0.25293-0.15381-0.15381-0.04102-0.29395-0.01367z"
+              fill="#1F2329"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

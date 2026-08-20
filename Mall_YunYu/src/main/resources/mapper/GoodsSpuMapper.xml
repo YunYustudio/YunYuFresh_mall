@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mall_yunyu.mapper.GoodsSpuMapper">
+
+    <!-- 小程序端上架商品分页 -->
+    <select id="appGoodsPage" resultType="com.mall_yunyu.entity.GoodsSpu">
+        SELECT s.* FROM goods_spu s
+        WHERE s.deleted = 0 AND s.status = 1
+        <if test="categoryIds != null and categoryIds.size() > 0">
+            AND s.category_id IN
+            <foreach collection="categoryIds" item="cid" open="(" separator="," close=")">
+                #{cid}
+            </foreach>
+        </if>
+        <if test="keyword != null and keyword != ''">
+            AND s.name LIKE CONCAT('%', #{keyword}, '%')
+        </if>
+        <choose>
+            <when test="sortField == 'sales'">
+                ORDER BY s.sales <if test="desc">DESC</if><if test="!desc">ASC</if>, s.id DESC
+            </when>
+            <when test="sortField == 'price'">
+                ORDER BY s.price IS NULL, s.price <if test="desc">DESC</if><if test="!desc">ASC</if>, s.id DESC
+            </when>
+            <otherwise>
+                ORDER BY s.sort ASC, s.id DESC
+            </otherwise>
+        </choose>
+    </select>
+
+</mapper>
